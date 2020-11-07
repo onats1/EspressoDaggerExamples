@@ -160,10 +160,10 @@ constructor(
             this.uiCommunicationListener = mockUICommuncationListener
         }
         else{ // PRODUCTION: if no mock, get from MainNavHostFragment
-            val navHostFragment = activity?.supportFragmentManager
-                ?.findFragmentById(R.id.nav_host_fragment) as MainNavHostFragment?
-            navHostFragment?.let{ navHost ->
-                this.uiCommunicationListener = navHost.uiCommunicationListener
+            try {
+                uiCommunicationListener = (context as UICommunicationListener)
+            } catch (e: Exception) {
+
             }
         }
     }

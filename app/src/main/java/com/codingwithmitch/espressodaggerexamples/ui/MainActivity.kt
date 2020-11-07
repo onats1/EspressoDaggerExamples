@@ -204,9 +204,9 @@ class MainActivity : AppCompatActivity()
     override fun onAttachFragment(fragment: Fragment) {
         when(fragment){
 
-            is MainNavHostFragment ->{
-                fragment.setUICommunicationListener(uiCommunicationListener)
-            }
+//            is MainNavHostFragment ->{
+//                fragment.setUICommunicationListener(uiCommunicationListener)
+//            }
         }
     }
 

@@ -19,7 +19,7 @@ open class BaseApplication: Application() {
         initAppComponent()
     }
 
-   open fun initAppComponent() {
+    open fun initAppComponent() {
        appComponent = DaggerAppComponent.builder()
             .application(this)
             .build()
